@@ -1,0 +1,8 @@
+---
+- name: configure fail2ban for wordpress
+  script: scripts/add_wordpress_fail2ban.sh
+  notify: restart fail2ban
+
+- name: copy wordpress fail2ban filter configs
+  copy: owner=root group=root src='fail2ban/wordpress.conf' dest='/etc/fail2ban/filter.d/wordpress.conf'
+  notify: restart fail2ban
