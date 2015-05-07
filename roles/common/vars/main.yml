@@ -1,5 +1,0 @@
----
-
-ssh_users:
-  - name: tony
-    key: "{{ lookup('file', 'ssh/tony.pub' ) }}"

@@ -30,6 +30,7 @@
     - man
     - zip
     - unzip
+    - tmux
 
 - name: disable SELinux
   selinux: state=disabled
@@ -43,19 +44,6 @@
       - {src: 'cron.daily/freshclam', dest: '/etc/cron.daily/freshclam'}
       - {src: 'fail2ban/jail.conf', dest: '/etc/fail2ban/jail.conf'}
       - {src: 'sudoers', dest: '/etc/sudoers'}
-
-#Install tmux
-- name: install tmux dependencies
-  yum: pkg={{ item }} state=present
-  with_items:
-    - ncurses
-    - ncurses-devel
-    - gcc
-
-#TODO: this is broken
-# - name: install tmux with script
-#   script: tmuxInstall.sh
-#   tags: tmux
 
 #No root ssh
 - name: standard ssh config
