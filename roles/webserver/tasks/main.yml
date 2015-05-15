@@ -15,6 +15,12 @@
     - httpd
     - mysqld
 
+- name: enable web services
+  service: name={{item}} enabled=yes
+  with_items:
+      - httpd
+      - mysqld
+
 - name: add iptables rule for HTTP
   command: iptables -I INPUT -p tcp --dport 80 -j ACCEPT
   notify: save iptables rules
