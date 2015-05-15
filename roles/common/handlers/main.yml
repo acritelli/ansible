@@ -1,0 +1,10 @@
+---
+
+- name: reboot server
+  command: shutdown -r now "Ansible changes requiring reboot"
+
+- name: restart fail2ban
+  service: name=fail2ban state=restarted
+
+- name: save iptables rules
+  command: service iptables save
