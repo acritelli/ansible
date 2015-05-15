@@ -31,6 +31,8 @@
     - zip
     - unzip
     - tmux
+    - lsof
+    - traceroute
 
 - name: disable SELinux
   selinux: state=disabled
