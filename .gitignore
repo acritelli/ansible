@@ -1,4 +1,3 @@
 .DS_Store
-files/ssh/
-files/sudoers
+roles/common/files/ssh/*
 sshd_config
