@@ -32,7 +32,7 @@
 #Note: Suhosin still needs to be manually installed
 - name: enable suhosin for PHP
   lineinfile:
-    dest = /etc/php.ini
-    regexp = "^extension = suhosin\.so"
-    state = present
-    instertafter = EOF
+    dest=/etc/php.ini
+    regexp="^extension = suhosin\.so"
+    state=present
+    instertafter=EOF
