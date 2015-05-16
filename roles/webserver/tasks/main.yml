@@ -36,3 +36,4 @@
     regexp="^extension = suhosin\.so"
     state=present
     instertafter=EOF
+    line="^extension = suhosin.so"
