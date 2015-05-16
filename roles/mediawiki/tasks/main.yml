@@ -7,4 +7,13 @@
     - php-pecl-apc
     - Image-Magick
 
+#Per Mediawiki recommendations
+- name: enable suhosin for PHP
+  lineinfile:
+    dest=/etc/php.ini
+    regexp="suhosin\.get\.max_value_length = 1024"
+    state=present
+    instertafter=EOF
+    line="^suhosin.get.max_value_length = 1024"
+
 #TODO: Fail2ban configuration for mediawiki to include log rotation
