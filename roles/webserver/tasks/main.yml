@@ -28,3 +28,6 @@
 - name: add iptables rule for HTTPS
   command: iptables -I INPUT -p tcp --dport 443 -j ACCEPT
   notify: save iptables rules
+
+- name: enable suhosin
+  command: echo "extension = suhosin.so >> /etc/php.ini"
