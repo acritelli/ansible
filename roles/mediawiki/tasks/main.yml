@@ -1,0 +1,8 @@
+---
+
+- name: install necessary packages for mediawiki
+  yum: pkg={{ item }} state=present
+  with_items:
+    - php-xml
+    - php-pecl-apc
+    - Image-Magick
