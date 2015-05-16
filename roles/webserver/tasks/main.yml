@@ -29,5 +29,9 @@
   command: iptables -I INPUT -p tcp --dport 443 -j ACCEPT
   notify: save iptables rules
 
-- name: enable suhosin
-  command: echo "extension = suhosin.so >> /etc/php.ini"
+#Note: Suhosin still needs to be manually installed
+- name: enable suhosin for PHP
+  lineinfile:
+    dest = /etc/php.ini
+    regexp = "^extension = suhosin\.so"
+    state = present
