@@ -6,3 +6,5 @@
     - php-xml
     - php-pecl-apc
     - Image-Magick
+
+#TODO: Fail2ban configuration for mediawiki to include log rotation
