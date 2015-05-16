@@ -12,7 +12,7 @@
   service: name=mysqld enabled=yes
 
 - name: add iptables rule for HTTP
-  command: iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+  command: iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
   notify: save iptables rules
 
 - name: add iptables rule for HTTPS
