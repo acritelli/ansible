@@ -13,7 +13,7 @@
     dest=/etc/php.ini
     regexp="suhosin\.get\.max_value_length = 1024"
     state=present
-    instertafter=EOF
+    insertafter=EOF
     line="^suhosin.get.max_value_length = 1024"
 
 #TODO: Fail2ban configuration for mediawiki to include log rotation

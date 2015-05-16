@@ -35,5 +35,5 @@
     dest=/etc/php.ini
     regexp="^extension = suhosin\.so"
     state=present
-    instertafter=EOF
+    insertafter=EOF
     line="^extension = suhosin.so"
