@@ -14,6 +14,6 @@
     regexp="suhosin\.get\.max_value_length = 1024"
     state=present
     insertafter=EOF
-    line="^suhosin.get.max_value_length = 1024"
+    line="suhosin.get.max_value_length = 1024"
 
 #TODO: Fail2ban configuration for mediawiki to include log rotation

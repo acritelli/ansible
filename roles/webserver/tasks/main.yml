@@ -36,4 +36,4 @@
     regexp="^extension = suhosin\.so"
     state=present
     insertafter=EOF
-    line="^extension = suhosin.so"
+    line="extension = suhosin.so"
