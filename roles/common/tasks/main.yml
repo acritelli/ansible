@@ -33,6 +33,7 @@
     - tmux
     - lsof
     - traceroute
+    - gcc
 
 - name: disable SELinux
   selinux: state=disabled
