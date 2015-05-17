@@ -8,6 +8,8 @@
     - php
     - php-devel
     - php-mysql
+    - mod_ssl
+    - openssl
 
 - name: start web services
   service: name={{ item }} state=started
