@@ -45,7 +45,6 @@
   with_items:
       - {src: 'cron.daily/clamscan', dest: '/etc/cron.daily/clamscan'}
       - {src: 'cron.daily/freshclam', dest: '/etc/cron.daily/freshclam'}
-      - {src: 'fail2ban/jail.conf', dest: '/etc/fail2ban/jail.conf'}
       - {src: 'sudoers', dest: '/etc/sudoers'}
 
 #No root ssh
