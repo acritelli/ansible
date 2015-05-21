@@ -71,7 +71,6 @@
 - name: enable standard services
   service: name={{item}} enabled=yes
   with_items:
-      - clamd
       - crond
       - fail2ban
       - iptables
@@ -83,7 +82,6 @@
 - name: start standard services
   service: name={{ item }} state=started
   with_items:
-    - clamd
     - crond
     - fail2ban
     - iptables
