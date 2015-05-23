@@ -1,0 +1,22 @@
+---
+
+# Based on the Fedora quickstart tutorial: http://nagios.sourceforge.net/docs/3_0/quickstart-fedora.html
+# Note that this does not actually download and install Nagios, just prepares the system for a nagios install
+
+- name: install nagios dependencies: gd, gcc, glibc
+  yum: pkg={{ item }} state=present
+  with_items:
+    - gd
+    - gd-devel
+    - gcc
+    - glibc
+    - glibc-common
+
+- name: add nagcmd group
+  group: name=nagcmd state=present
+
+- name: add nagios user
+  user: name=nagios  state=present groups=nagcmd
+
+- name: add apache user to nagcmd group
+  user: name=apache groups=nagcmd
